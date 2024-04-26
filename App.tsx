@@ -14,8 +14,16 @@ import {
 import QuestionScreen from './src/QuestionScreen';
 import Login from './src/Login';
 import UserProfile from './src/UserProfile';
+import HomeTabScreen from './component/BottomTabNavigation';
 
 const Stack = createStackNavigator();
+
+type BottomTabParamList = {
+  Home: undefined;
+  Account: undefined;
+};
+
+const Tab = createBottomTabNavigator<BottomTabParamList>();
 
 function App(): JSX.Element {
   // const handlePress = buttonName => {
@@ -34,8 +42,8 @@ function App(): JSX.Element {
             }}
           />
           <Stack.Screen
-            name="UserProfile"
-            component={UserProfile}
+            name="HomeTabScreen"
+            component={HomeTabScreen}
             options={{
               headerShown: false,
             }}
