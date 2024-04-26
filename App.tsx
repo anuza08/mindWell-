@@ -12,11 +12,12 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import QuestionScreen from './src/QuestionScreen';
-import SlashScrren from './src/SlashScreen';
+import Login from './src/Login';
+import UserProfile from './src/UserProfile';
 
 const Stack = createStackNavigator();
 
-const HelloWorldApp = () => {
+function App(): JSX.Element {
   // const handlePress = buttonName => {
   //   Alert.alert(`You pressed the ${buttonName} button`);
   // };
@@ -26,8 +27,15 @@ const HelloWorldApp = () => {
       <NavigationContainer>
         <Stack.Navigator>
         <Stack.Screen
-            name="SlashScrren"
-            component={SlashScrren}
+            name="Login"
+            component={Login}
+            options={{
+              headerShown: false,
+            }}
+          />
+          <Stack.Screen
+            name="UserProfile"
+            component={UserProfile}
             options={{
               headerShown: false,
             }}
@@ -70,4 +78,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default HelloWorldApp;
+export default App;
