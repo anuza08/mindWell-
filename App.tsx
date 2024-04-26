@@ -12,7 +12,8 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import QuestionScreen from './src/QuestionScreen';
-import SlashScrren from './src/SlashScreen';
+import Login from './src/Login';
+import UserProfile from './src/UserProfile';
 
 const Stack = createStackNavigator();
 
@@ -25,9 +26,16 @@ const HelloWorldApp = () => {
     <SafeAreaProvider>
       <NavigationContainer>
         <Stack.Navigator>
-        <Stack.Screen
-            name="SlashScrren"
-            component={SlashScrren}
+          <Stack.Screen
+            name="Login"
+            component={Login}
+            options={{
+              headerShown: false,
+            }}
+          />
+          <Stack.Screen
+            name="UserProfile"
+            component={UserProfile}
             options={{
               headerShown: false,
             }}
@@ -39,7 +47,6 @@ const HelloWorldApp = () => {
               headerShown: false,
             }}
           />
-         
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaProvider>
