@@ -1,4 +1,5 @@
 import React from 'react';
+import { Image } from 'react-native';
 import { NavigationContainer, useIsFocused } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import HomeScreen from '../src/HomeScreen';
@@ -22,12 +23,12 @@ function HomeTabScreen() {
         screenOptions={({ route }) => ({
           headerShown: false,
           tabBarStyle: { height: '55%' },
-          tabBarActiveTintColor: 'white', 
-          tabBarInactiveTintColor: 'gray',
+          tabBarActiveTintColor: 'black', 
+          tabBarInactiveTintColor: 'white',
           showLabel: true, 
           style: {
             height: '55%' ,
-            backgroundColor: '#478493', 
+            backgroundColor: 'white', 
             borderTopWidth: 1, 
             borderTopColor: 'gray', 
           },
@@ -44,7 +45,7 @@ function HomeTabScreen() {
           options={{
             tabBarLabel: 'Home',
             tabBarIcon: ({ color, size }) => (
-              <HomeComponent width={size} height={size} fill={color} />
+              <Image source={require('../asset/Default.png')}style={{width: size, height: size,}}/>
             ),
             tabBarStyle: isFocused ? { backgroundColor: '#478493' } : {},
           }}
@@ -55,9 +56,9 @@ function HomeTabScreen() {
           component={UserProfile}
           options={{
             tabBarLabel: 'Account',
-            // tabBarIcon: ({ color, size }) => (
-            //   <UserComponent width={size} height={size} fill={color} />
-            // ),
+            tabBarIcon: ({ color, size }) => (
+             <Image source={require('../asset/Default.png')}style={{width: size, height: size,}}/>
+            ),
             tabBarStyle: isFocused ? { backgroundColor: '#478493' } : {},
           }}
         />

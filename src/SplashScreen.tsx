@@ -24,10 +24,10 @@ const SplashScreen: React.FC = () => {
           source={require('../asset/mindwelllogogif.gif')}
           
         />
-        <View style={{alignItems: 'center', marginTop: '14%'}}>
+        <View style={{alignItems: 'center', marginTop: '15%'}}>
           
         
-          <Text style={{color: 'white', fontSize: 25}}>Welcome to Mindwell</Text>
+          <Text style={{color: 'white', fontSize: 40,fontFamily: 'HiMelody-Regular'}}>Welcome to Mindwell</Text>
           
         
         </View>

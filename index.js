@@ -18,7 +18,7 @@ const EntryPoint = () => {
     useEffect(() => {
       const timer = setTimeout(() => {
         setShowSplash(false);
-      }, 5000); // Show splash screen for 3 seconds
+      }, 3000); // Show splash screen for 3 seconds
   
       return () => clearTimeout(timer); // Clean up the timer
     }, []);
