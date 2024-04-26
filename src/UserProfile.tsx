@@ -14,7 +14,7 @@ const userImg = require('../asset/Default.png');
 const yellowrect = require('../asset/Rectangle80.png');
 
 const UserProfile = () => {
-  const handleButtonClick = (buttonName: string) => {
+  const handleButtonClick = buttonName => {
     console.log(`${buttonName} clicked`);
   };
 

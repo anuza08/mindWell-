@@ -26,7 +26,7 @@ function App(): JSX.Element {
     <SafeAreaProvider>
       <NavigationContainer>
         <Stack.Navigator>
-        <Stack.Screen
+          <Stack.Screen
             name="Login"
             component={Login}
             options={{
@@ -47,7 +47,6 @@ function App(): JSX.Element {
               headerShown: false,
             }}
           />
-         
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaProvider>

@@ -9,14 +9,16 @@ import {
   TouchableOpacity,
   ImageBackground,
 } from 'react-native';
-
-
+const bgImg = require('../asset/loginbg.jpg');
 
 const Login = () => {
   const navigation = useNavigation();
   return (
+    // <View style={styles.container}>
+    //   <Text style={styles.helloText}>Hello, World!</Text>
+    // </View>
     <View style={styles.container}>
-      <ImageBackground source={require('../assets/loginbg.jpg')} style={styles.image} />
+      <ImageBackground source={bgImg} style={styles.image} />
       <View>
         <Button
           onPress={() => {
