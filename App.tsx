@@ -14,6 +14,7 @@ import {
 import QuestionScreen from './src/QuestionScreen';
 import Login from './src/Login';
 import UserProfile from './src/UserProfile';
+import JournalHistory from './src/JournalHistory';
 
 const Stack = createStackNavigator();
 
@@ -43,6 +44,13 @@ const HelloWorldApp = () => {
           <Stack.Screen
             name="QuestionScreen"
             component={QuestionScreen}
+            options={{
+              headerShown: false,
+            }}
+          />
+          <Stack.Screen
+            name="JournalHistory"
+            component={JournalHistory}
             options={{
               headerShown: false,
             }}

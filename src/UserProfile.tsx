@@ -8,6 +8,8 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
+import JournalHistory from './JournalHistory';
+import {useNavigation} from '@react-navigation/native';
 
 const profilebg = require('../asset/userprofile.jpg');
 const userImg = require('../asset/Default.png');
@@ -17,6 +19,8 @@ const UserProfile = () => {
   const handleButtonClick = buttonName => {
     console.log(`${buttonName} clicked`);
   };
+
+  const navigation = useNavigation();
 
   return (
     <ImageBackground source={profilebg} style={styles.backgroundImage}>
@@ -34,17 +38,20 @@ const UserProfile = () => {
         />
         <View style={styles.yellowcontainer}>
           <TouchableOpacity
-            onPress={() => handleButtonClick('First Button')}
+            onPress={() => {
+              handleButtonClick('Journal History');
+              navigation.navigate('JournalHistory');
+            }}
             style={styles.clickableImage}>
             <Image source={yellowrect} style={styles.yellowbtn} />
-            <Text style={styles.buttonText}>Click Here</Text>
+            <Text style={styles.buttonText}>Journal History</Text>
           </TouchableOpacity>
 
           <TouchableOpacity
             onPress={() => handleButtonClick('Second Button')}
             style={styles.clickableImage}>
             <Image source={yellowrect} style={styles.yellowbtn} />
-            <Text style={styles.buttonText}>Press Me</Text>
+            <Text style={styles.buttonText}>Logout</Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -96,7 +103,7 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     position: 'absolute',
-    top: '30%',
+    top: '40%',
     left: '17%',
     // textAlign: 'center',
     transform: [{translateX: -25}, {translateY: -10}],
