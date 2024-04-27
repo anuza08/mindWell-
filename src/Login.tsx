@@ -22,7 +22,7 @@ const Login = () => {
       <View>
         <Button
           onPress={() => {
-            navigation.navigate('UserProfile');
+            navigation.navigate('HomeTabScreen');
           }}
           title="Learn More"
           color="#841584"

@@ -14,11 +14,19 @@ import {
 import QuestionScreen from './src/QuestionScreen';
 import Login from './src/Login';
 import UserProfile from './src/UserProfile';
+import HomeTabScreen from './component/BottomTabNavigation';
 import JournalHistory from './src/JournalHistory';
 
 const Stack = createStackNavigator();
 
-const HelloWorldApp = () => {
+type BottomTabParamList = {
+  Home: undefined;
+  Account: undefined;
+};
+
+const Tab = createBottomTabNavigator<BottomTabParamList>();
+
+function App(): JSX.Element {
   // const handlePress = buttonName => {
   //   Alert.alert(`You pressed the ${buttonName} button`);
   // };
@@ -35,8 +43,8 @@ const HelloWorldApp = () => {
             }}
           />
           <Stack.Screen
-            name="UserProfile"
-            component={UserProfile}
+            name="HomeTabScreen"
+            component={HomeTabScreen}
             options={{
               headerShown: false,
             }}
@@ -85,4 +93,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default HelloWorldApp;
+export default App;
